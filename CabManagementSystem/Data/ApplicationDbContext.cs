@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using CabManagementSystem.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CabManagementSystem.Data
 {
@@ -13,6 +14,8 @@ namespace CabManagementSystem.Data
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         public DbSet<book> books { get; set; }
+
+        public DbSet<DriverDetails> DriverDetails { get; set; }
 
     }
 }

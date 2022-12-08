@@ -1,0 +1,40 @@
+﻿@model book 
+
+@{
+    ViewData["Title"] = "payment";
+}
+
+
+
+<div class="form-control details shadow p-3 mb-5  rounded">
+    <h2>Where can we pick you up?</h2>
+
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form method="post">
+            <div>
+
+                <label asp-for="BookDate">Date</label>
+                <span asp-validation-for="BookDate" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="from"></label>
+                <span asp-validation-for="from" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="to"></label>
+                <span asp-validation-for="to" class="text-danger"></span>
+            </div>
+           
+
+            <div>
+                <label asp-for="time"></label>
+                <span asp-validation-for="time" class="text-danger"></span>
+            </div>
+            <div class="d-grid mt-4">
+                <button class="btn btn-primary">Pay Now</button>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            </div>
+
+        </form>
+    </div>
+
